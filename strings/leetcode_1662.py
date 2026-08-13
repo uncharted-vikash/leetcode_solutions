@@ -37,10 +37,10 @@ word1[i] and word2[i] consist of lowercase letters.'''
 def arrayStringsAreEqual(word1: list[str], word2: list[str]) -> bool:
 # <---------------------Aproach _01: T.C -> O(N) and S.C -> O(N)--------------------->
 
-    # s1 = "".join(word1)
-    # s2 = "".join(word2)
+    s1 = "".join(word1)
+    s2 = "".join(word2)
 
-    # return s1 == s2
+    return s1 == s2
 
 # <---------------- Aproach_02: T.C -> O(N) and S.C -> O(1) (two pointer) ---------------->
 
