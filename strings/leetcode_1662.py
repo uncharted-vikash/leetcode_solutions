@@ -72,17 +72,3 @@ print(arrayStringsAreEqual(word1 = ["a", "cb"], word2 = ["ab", "c"]))
             
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
