@@ -30,13 +30,14 @@ All the numbers of nums are unique.
 
 
 '''
-Intuition
+Intuition:-------
 The key idea is: for every element, we have exactly 2 choices:
-Include nums[index] in the current subset.
-Skip nums[index].
-Complexity
+
+1. Include nums[index] in the current subset.
+2. Skip nums[index].
+Complexity:---
 Time complexity:
-<There are 2^n possible subsets.
+There are 2^n possible subsets.
 For every subset, we copy the path into result, which can take up to O(n).
 
 Overall: O(n × 2^n)
@@ -61,7 +62,7 @@ def subsets(nums: list[int]) -> list[list[int]]:
         backtrack(index + 1, path)
         path.pop()
 
-        # Dicision_02: skip nums[index]
+        # Decision_02: skip nums[index]
         backtrack(index + 1, path)
 
     backtrack(0, [])
