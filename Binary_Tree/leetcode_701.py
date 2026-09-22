@@ -38,31 +38,31 @@ It's guaranteed that val does not exist in the original BST.
 
 # <----------------------------------------------------------------------------->
 
-'''
-💡 The Intuition:
 
-The beauty of a BST is its inherent order. When inserting a new value, we don't need to reorganize the entire tree. We just need to search for the correct empty spot (a None pointer) where the value logically belongs.
+# 💡 The Intuition:
 
-Instead of using recursion—which adds overhead to the call stack—we can use a simple while True loop to drift down the tree until we find an open slot.
+# The beauty of a BST is its inherent order. When inserting a new value, we don't need to reorganize the entire tree. We just need to search for the correct empty spot (a None pointer) where the value logically belongs.
 
-🛠️ The Tactical Approach
+# Instead of using recursion—which adds overhead to the call stack—we can use a simple while True loop to drift down the tree until we find an open slot.
 
-1. Handle the Base Case: If the tree is completely empty (root is None), the new node becomes the root. 
+# 🛠️ The Tactical Approach
 
-2.Traverse the Tree: Use a pointer (current) to navigate.
+# 1. Handle the Base Case: If the tree is completely empty (root is None), the new node becomes the root. 
 
-3. Make the Decision:
+# 2.Traverse the Tree: Use a pointer (current) to navigate.
 
-    1. If the target value is less than the current node's value, check the left child. 
-    2. If it’s empty, insert the node and break. Otherwise, move left.If the target value is greater, check the right child. If it’s empty, insert the node and break. Otherwise, move right.
+# 3. Make the Decision:
+
+#     1. If the target value is less than the current node's value, check the left child. 
+#     2. If it’s empty, insert the node and break. Otherwise, move left.If the target value is greater, check the right child. If it’s empty, insert the node and break. Otherwise, move right.
     
-    4. Return the Root: Return the original root of the modified tree.
+#     4. Return the Root: Return the original root of the modified tree.
 
-📊 Complexity AnalysisTime 
-    Complexity: O(H), where H is the height of the tree. In the best/average case (balanced tree), this takes \(O(\log N)\) time. In the worst case (skewed tree/linked list shape), it takes O(N) time.
+# 📊 Complexity AnalysisTime 
+#     Complexity: O(H), where H is the height of the tree. In the best/average case (balanced tree), this takes \(O(\log N)\) time. In the worst case (skewed tree/linked list shape), it takes O(N) time.
     
-    Space Complexity: O(1) Auxiliary Space! Because we used an iterative pointer approach instead of recursion, we don't use any extra space on the call stack.Here is the clean Python implementation:
-'''
+#     Space Complexity: O(1) Auxiliary Space! Because we used an iterative pointer approach instead of recursion, we don't use any extra space on the call stack.Here is the clean Python implementation:
+
 
 
 # CODE: SOLUTIONS:
