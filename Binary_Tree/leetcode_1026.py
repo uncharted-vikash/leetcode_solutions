@@ -57,6 +57,7 @@ class Solution:
         return max(left_max, right_max)
 
     def maxAncestorDiff(self, root: TreeNode | None) -> int:
+        if not root: return 0
 
         return self.findMaxDiff(root, root.val, root.val)
         
